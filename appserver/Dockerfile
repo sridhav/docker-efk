@@ -12,6 +12,8 @@ RUN rm -rf /tmp/filebeat-5.5.0-linux-x86_64.tar.gz
 
 ADD ./logs/ /opt/logs/
 
+ADD ./logs/sample /opt/logs/sample.log
+
 ADD ./conf/filebeat.yml /opt/filebeat/filebeat.yml
 
 CMD /opt/filebeat/filebeat -e -v -c /opt/filebeat/filebeat.yml
